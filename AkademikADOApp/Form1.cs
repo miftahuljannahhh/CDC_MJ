@@ -39,19 +39,3 @@ namespace CDC_MJ
                 MessageBox.Show("Koneksi gagal : " + ex.Message);
             }
         }
-
-        private void btnDisconnect_Click(object sender, EventArgs e)
-        {
-            if (conn != null && conn.State == System.Data.ConnectionState.Open)
-            {
-                conn.Close();
-                lblStatus.Text = "Status : Database Disconnected";
-                MessageBox.Show("Koneksi database ditutup!");
-            }
-        }
-    }
-}
-
-
-
-
