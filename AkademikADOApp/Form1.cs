@@ -43,7 +43,11 @@ namespace CDC_MJ
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             if (conn != null && conn.State == System.Data.ConnectionState.Open)
-          
+            {
+                conn.Close();
+               
+            }
+        }
     }
 }
 
