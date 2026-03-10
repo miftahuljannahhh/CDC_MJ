@@ -46,7 +46,7 @@ namespace CDC_MJ
             {
                 conn.Close();
                 lblStatus.Text = "Status : Database Disconnected";
-               
+                MessageBox.Show("Koneksi database ditutup!");
             }
         }
     }
