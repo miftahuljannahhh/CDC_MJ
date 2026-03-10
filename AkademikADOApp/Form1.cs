@@ -24,34 +24,4 @@ namespace CDC_MJ
             InitializeComponent();
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conn = new SqlConnection(connString);
-                conn.Open();
-
-                lblStatus.Text = "Status : Database Connected";
-                MessageBox.Show("Koneksi ke database berhasil!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Koneksi gagal : " + ex.Message);
-            }
-        }
-
-        private void btnDisconnect_Click(object sender, EventArgs e)
-        {
-            if (conn != null && conn.State == System.Data.ConnectionState.Open)
-            {
-                conn.Close();
-                lblStatus.Text = "Status : Database Disconnected";
-                MessageBox.Show("Koneksi database ditutup!");
-            }
-        }
-    }
-}
-
-
-
-
+       
